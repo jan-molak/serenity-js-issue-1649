@@ -1,0 +1,48 @@
+{
+  "name": "serenity-js-cucumber-playwright-template",
+  "version": "3.0.0",
+  "scripts": {
+    "postinstall": "serenity-bdd update --artifact='net.serenity-bdd:serenity-cli:jar:3.6.12'",
+    "clean": "rimraf target",
+    "test": "failsafe clean test:execute test:report",
+    "test:execute": "cucumber-js",
+    "test:report": "serenity-bdd run --features ../resources/features/ --source ../../../target/site/serenity/ --artifact='net.serenity-bdd:serenity-cli:jar:3.6.12'"
+  },
+  "dependencies": {
+    "@cucumber/cucumber": "8.11.0",
+    "@cucumber/html-formatter": "20.2.1",
+    "@cucumber/messages": "^21.0.0",
+    "@cucumber/pretty-formatter": "1.0.0",
+    "@playwright/test": "1.30.0",
+    "@types/fs-extra": "11.0.1",
+    "cucumber-console-formatter": "1.0.0",
+    "cucumber-html-reporter": "5.5.0"
+  },
+  "devDependencies": {
+    "@serenity-js/console-reporter": "^3.0.0-rc.42",
+    "@serenity-js/core": "^3.0.0-rc.42",
+    "@serenity-js/cucumber": "^3.0.0-rc.42",
+    "@serenity-js/serenity-bdd": "^3.0.0-rc.42",
+    "@types/expect": "24.3.0",
+    "@types/fs-extra": "11.0.1",
+    "@types/lodash": "4.14.191",
+    "@types/node": "18.13.0",
+    "@types/pixelmatch": "5.2.4",
+    "@types/pngjs": "6.0.1",
+    "@typescript-eslint/eslint-plugin": "5.51.0",
+    "@typescript-eslint/parser": "5.51.0",
+    "allure-cucumberjs": "2.0.0-beta.25",
+    "eslint": "8.34.0",
+    "eslint-config-prettier": "8.6.0",
+    "eslint-plugin-import": "2.27.5",
+    "eslint-plugin-prettier": "4.2.1",
+    "npm-failsafe": "^1.0.0",
+    "fs-extra": "11.1.0",
+    "open": "8.4.1",
+    "prettier": "2.8.3",
+    "rimraf": "^4.1.2",
+    "standard-version": "9.5.0",
+    "ts-node": "10.9.1",
+    "typescript": "5.0.2"
+  }
+}
