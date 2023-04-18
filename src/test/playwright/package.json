@@ -6,7 +6,7 @@
     "clean": "rimraf target",
     "test": "failsafe clean test:execute test:report",
     "test:execute": "cucumber-js",
-    "test:report": "serenity-bdd run --features ../resources/features/ --source ../../../target/site/serenity/ --artifact='net.serenity-bdd:serenity-cli:jar:3.6.12'"
+    "test:report": "serenity-bdd run --features ../resources/features/ --source ../../../target/site/serenity/ --destination ../../../target/site/serenity/ --artifact='net.serenity-bdd:serenity-cli:jar:3.6.12' --shortFilenames false --log debug"
   },
   "dependencies": {
     "@cucumber/cucumber": "8.11.0",
@@ -19,10 +19,10 @@
     "cucumber-html-reporter": "5.5.0"
   },
   "devDependencies": {
-    "@serenity-js/console-reporter": "^3.0.0-rc.42",
-    "@serenity-js/core": "^3.0.0-rc.42",
-    "@serenity-js/cucumber": "^3.0.0-rc.42",
-    "@serenity-js/serenity-bdd": "^3.0.0-rc.42",
+    "@serenity-js/console-reporter": "^3.1.5",
+    "@serenity-js/core": "^3.1.5",
+    "@serenity-js/cucumber": "^3.1.5",
+    "@serenity-js/serenity-bdd": "^3.1.5",
     "@types/expect": "24.3.0",
     "@types/fs-extra": "11.0.1",
     "@types/lodash": "4.14.191",
