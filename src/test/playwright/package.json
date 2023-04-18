@@ -6,7 +6,7 @@
     "clean": "rimraf target",
     "test": "failsafe clean test:execute test:report",
     "test:execute": "cucumber-js",
-    "test:report": "serenity-bdd run --features ../resources/features/ --source ../../../target/site/serenity/ --artifact='net.serenity-bdd:serenity-cli:jar:3.6.12'"
+    "test:report": "serenity-bdd run --features ../resources/features/ --source ../../../target/site/serenity/ --destination ../../../target/site/serenity/ --artifact='net.serenity-bdd:serenity-cli:jar:3.6.12' --log debug"
   },
   "dependencies": {
     "@cucumber/cucumber": "8.11.0",
