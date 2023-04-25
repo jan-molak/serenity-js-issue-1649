@@ -2,11 +2,11 @@
   "name": "serenity-js-cucumber-playwright-template",
   "version": "3.0.0",
   "scripts": {
-    "postinstall": "serenity-bdd update --artifact='net.serenity-bdd:serenity-cli:jar:3.6.12'",
+    "postinstall": "serenity-bdd update --artifact='net.serenity-bdd:serenity-cli:jar:3.6.23'",
     "clean": "rimraf target",
     "test": "failsafe clean test:execute test:report",
     "test:execute": "cucumber-js",
-    "test:report": "serenity-bdd run --features ../resources/features/ --source ../../../target/site/serenity/ --destination ../../../target/site/serenity/ --artifact='net.serenity-bdd:serenity-cli:jar:3.6.12' --shortFilenames false --log debug"
+    "test:report": "serenity-bdd run --features ../resources/features/ --source ../../../target/site/serenity/ --destination ../../../target/site/serenity/ --artifact='net.serenity-bdd:serenity-cli:jar:3.6.23' --shortFilenames false --log debug"
   },
   "dependencies": {
     "@cucumber/cucumber": "8.11.0",
